@@ -1,0 +1,27 @@
+#     ____         _         __             
+#    / __ \ _____ (_)____   / /_ ___   _____
+#   / /_/ // ___// // __ \ / __// _ \ / ___/
+#  / ____// /   / // / / // /_ /  __// /    
+# /_/    /_/   /_//_/ /_/ \__/ \___//_/     
+                                          
+
+[mcu]
+##	Obtain mcu value by "ls -l /dev/serial/by-id/" 
+serial: /dev/serial/by-id/usb-Klipper_stm32f103xe_31FFD3054250373922680257-if00
+
+[display_status]
+[pause_resume]
+[virtual_sdcard]
+path: ~/gcode_files
+[idle_timeout]
+timeout: 180
+
+[printer]
+kinematics: corexy
+max_velocity: 250
+#max_accel: 10000
+#max_accel_to_decel: 10000
+max_accel: 5000
+max_z_velocity: 10
+max_z_accel: 30
+square_corner_velocity: 5.0
